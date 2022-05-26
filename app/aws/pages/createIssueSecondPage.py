@@ -6,7 +6,7 @@ class CreateIssueSecondPage(LoggedInPage):
 
     __SUMMARY_FIELD = PageElement.by_css_selector("#summary")
     __DESCRIPTION_TEXT_TAB =\
-        PageElement.by_css_selector('#description-wiki-edit > nav > div > div > ul > li:nth-child(2) > a')
+        PageElement.by_css_selector('#description-wiki-edit > nav > div > div > ul > li:nth-child(2) > button')
     __DESCRIPTION_FIELD = PageElement.by_css_selector("#description")
 
     __summary = PageFieldElement(__SUMMARY_FIELD)
