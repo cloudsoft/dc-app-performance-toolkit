@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<sample t="163" lt="0" ts="1653591278124" s="false" lb="jmeter_customer_view_requests:my_requests" rc="502" rm="Number of samples in transaction : 3, number of failing samples : 1" tn="Customers 1-11" dt="" de="" by="27024" ng="30" na="30">
+  <httpSample t="3" lt="3" ts="1653591278124" s="false" lb="250 /rest/webResources/1.0/resources" rc="502" rm="Bad Gateway" tn="Customers 1-11" dt="text" de="" by="680" ng="30" na="30">
+    <responseHeader class="java.lang.String">HTTP/1.1 502 Bad Gateway
+Server: awselb/2.0
+Date: Thu, 26 May 2022 18:54:38 GMT
+Content-Type: text/html
+Content-Length: 122
+Connection: keep-alive
+Set-Cookie: AWSALB=uZRjtZdtxck4h24buK87VCMyrMCfaxJm9g8oQiBxM28FD+puT09PBGxdMz/HCCWglL3krdUm8kBUKGEJ96BoEGhuKD9BaUxTNC8T8uCPTmEs+jvyi1Rklodl2M2b; Expires=Thu, 02 Jun 2022 18:54:38 GMT; Path=/
+Set-Cookie: AWSALBCORS=uZRjtZdtxck4h24buK87VCMyrMCfaxJm9g8oQiBxM28FD+puT09PBGxdMz/HCCWglL3krdUm8kBUKGEJ96BoEGhuKD9BaUxTNC8T8uCPTmEs+jvyi1Rklodl2M2b; Expires=Thu, 02 Jun 2022 18:54:38 GMT; Path=/; SameSite=None
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Accept: application/json, text/javascript, */*; q=0.01
+Content-Type: application/json
+Origin: http://jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com:80
+Content-Length: 244
+Host: jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.13)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;html&gt;&#xd;
+&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;&#xd;
+&lt;body&gt;&#xd;
+&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;&#xd;
+&lt;/body&gt;&#xd;
+&lt;/html&gt;&#xd;
+</responseData>
+    <cookies class="java.lang.String">JSESSIONID=B19E1661599ADAB2AD314CDDFB56229B; seraph.rememberme.cookie=10631%3Ac899fd2420a464e464e008b06c657f192a75ea4f; atlassian.xsrf.token=BM5I-V73Y-TB4U-V4LJ_331bbb9afc169369ae6f0d821e77e1f9c0fa8e69_lin; AWSALB=ctU3LUkYOfTs7eKUVZU+AknC3MKTeGb2PTnSL7Mxsv+YU28vPd1Odc6xpLGCdX5IyXLuN/QAO45qzUT1Kp90ihrjNJYnlJvjLsJdMIUBZD7H7MxiSReVBMwqkKr9; AWSALBCORS=ctU3LUkYOfTs7eKUVZU+AknC3MKTeGb2PTnSL7Mxsv+YU28vPd1Odc6xpLGCdX5IyXLuN/QAO45qzUT1Kp90ihrjNJYnlJvjLsJdMIUBZD7H7MxiSReVBMwqkKr9</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">{&quot;r&quot;:[],&quot;c&quot;:[&quot;com.atlassian.servicedesk.frontend-webpack-plugin:17&quot;],&quot;xc&quot;:[&quot;jira.webresources:almond&quot;,&quot;customerportal&quot;,&quot;com.atlassian.analytics.analytics-client:js-events&quot;,&quot;async-chunk-cv-landing-page&quot;,&quot;browser-metrics-plugin.contrib&quot;],&quot;xr&quot;:[]}</queryString>
+    <java.net.URL>http://jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com/jira/rest/webResources/1.0/resources</java.net.URL>
+  </httpSample>
+  <httpSample t="157" lt="157" ts="1653591278128" s="true" lb="255 /rest/servicedesk/1/customer/models" rc="200" rm="" tn="Customers 1-11" dt="text" de="UTF-8" by="25362" ng="30" na="30">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Date: Thu, 26 May 2022 18:54:38 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: AWSALB=wnsMMwSuhPe2v1YK4YAjEtn1EB/mcLC7a2NYKJ/Mnr4CJ12BFHjaIMoXrG8tUGiT+5bIKGFE/vYOkbwtZPORBbm46COQYuRQD64POqNb/dryfspbzsj3i1VtLjFi; Expires=Thu, 02 Jun 2022 18:54:38 GMT; Path=/
+Set-Cookie: AWSALBCORS=wnsMMwSuhPe2v1YK4YAjEtn1EB/mcLC7a2NYKJ/Mnr4CJ12BFHjaIMoXrG8tUGiT+5bIKGFE/vYOkbwtZPORBbm46COQYuRQD64POqNb/dryfspbzsj3i1VtLjFi; Expires=Thu, 02 Jun 2022 18:54:38 GMT; Path=/; SameSite=None
+X-AREQUESTID: 1134x167149x2
+X-ASESSIONID: 1l3wwr2
+X-ANODEID: i-06eea784279dd1059
+Referrer-Policy: strict-origin-when-cross-origin
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: sandbox
+Strict-Transport-Security: max-age=31536000
+X-Seraph-LoginReason: OK
+X-AUSERNAME: performance_customer_0_acxaryadefenmff
+Cache-Control: no-cache, no-store, no-transform
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Accept: */*
+Content-Type: application/json
+Origin: http://jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com:80
+Content-Length: 323
+Host: jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.13)
+</requestHeader>
+    <java.net.URL>http://jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com/jira/rest/servicedesk/1/customer/models</java.net.URL>
+  </httpSample>
+  <httpSample t="3" lt="3" ts="1653591278285" s="true" lb="260 /rest/analytics/1.0/publish/bulk" rc="200" rm="" tn="Customers 1-11" dt="text" de="UTF-8" by="982" ng="30" na="30">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Date: Thu, 26 May 2022 18:54:38 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 0
+Connection: keep-alive
+Set-Cookie: AWSALB=zyjUrCFUf/8sH5xaChvYlNMTlLjQ1DM6OJIlKTW0VFJnLo3uwXaGqhzB8XLvw43HAF14VR5wxOEWt9BIPVC1cNVtUR/zUF+6juvMrz0nOfBp3rPppUtfdlK1ZJLT; Expires=Thu, 02 Jun 2022 18:54:38 GMT; Path=/
+Set-Cookie: AWSALBCORS=zyjUrCFUf/8sH5xaChvYlNMTlLjQ1DM6OJIlKTW0VFJnLo3uwXaGqhzB8XLvw43HAF14VR5wxOEWt9BIPVC1cNVtUR/zUF+6juvMrz0nOfBp3rPppUtfdlK1ZJLT; Expires=Thu, 02 Jun 2022 18:54:38 GMT; Path=/; SameSite=None
+X-AREQUESTID: 1134x167159x2
+X-ASESSIONID: 1l3wwr2
+X-ANODEID: i-06eea784279dd1059
+Referrer-Policy: strict-origin-when-cross-origin
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: sandbox
+Strict-Transport-Security: max-age=31536000
+X-Seraph-LoginReason: OK
+X-AUSERNAME: performance_customer_0_acxaryadefenmff
+Cache-Control: no-cache, no-store, no-transform
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Accept: application/json, text/javascript, */*; q=0.01
+Content-Type: application/json;
+Origin: http://jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com:80
+Content-Length: 2364
+Host: jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.13)
+</requestHeader>
+    <java.net.URL>http://jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com/jira/rest/analytics/1.0/publish/bulk</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="202" lt="0" ts="1653592261028" s="false" lb="jmeter_customer_view_requests:my_requests" rc="502" rm="Number of samples in transaction : 3, number of failing samples : 1" tn="Customers 1-2" dt="" de="" by="31213" ng="30" na="30">
+  <httpSample t="2" lt="2" ts="1653592261028" s="false" lb="250 /rest/webResources/1.0/resources" rc="502" rm="Bad Gateway" tn="Customers 1-2" dt="text" de="" by="680" ng="30" na="30">
+    <responseHeader class="java.lang.String">HTTP/1.1 502 Bad Gateway
+Server: awselb/2.0
+Date: Thu, 26 May 2022 19:11:01 GMT
+Content-Type: text/html
+Content-Length: 122
+Connection: keep-alive
+Set-Cookie: AWSALB=Gm53O4ZV9jIRdOo/HDIG+y9bjAIuhnYrsi4MbSK2Y3qHfaCQDn2oc1W8tqSbvfHu5dpXRvR8vQ6W1oL4i4LrWBGzE2m8j7YhvtUXwW/xLPXe1fAvDPfyKkGVR/ah; Expires=Thu, 02 Jun 2022 19:11:01 GMT; Path=/
+Set-Cookie: AWSALBCORS=Gm53O4ZV9jIRdOo/HDIG+y9bjAIuhnYrsi4MbSK2Y3qHfaCQDn2oc1W8tqSbvfHu5dpXRvR8vQ6W1oL4i4LrWBGzE2m8j7YhvtUXwW/xLPXe1fAvDPfyKkGVR/ah; Expires=Thu, 02 Jun 2022 19:11:01 GMT; Path=/; SameSite=None
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Accept: application/json, text/javascript, */*; q=0.01
+Content-Type: application/json
+Origin: http://jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com:80
+Content-Length: 244
+Host: jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.13)
+</requestHeader>
+    <responseData class="java.lang.String">&lt;html&gt;&#xd;
+&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;&#xd;
+&lt;body&gt;&#xd;
+&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;&#xd;
+&lt;/body&gt;&#xd;
+&lt;/html&gt;&#xd;
+</responseData>
+    <cookies class="java.lang.String">JSESSIONID=386A7CB58E48E0DC35A05DBB9EAFCDA2; seraph.rememberme.cookie=10617%3A8c57e578a9853bdc4fcf1c6917af26ccd28192d2; atlassian.xsrf.token=BM5I-V73Y-TB4U-V4LJ_6aeb9615bd7d87af7f8da0cefff48fb30a87805a_lin; AWSALB=9GQGZ+WfuQoYV1QWPp1n9G30T1bYU7cRTcW2Kqqkci9gBGlXT2LQMXTql8q0HiTYXWembA4NoovzIrNVV7QzoL/+pLWul2SdAtzw0xUKYaltn04vpq6OlEjwaKsV; AWSALBCORS=9GQGZ+WfuQoYV1QWPp1n9G30T1bYU7cRTcW2Kqqkci9gBGlXT2LQMXTql8q0HiTYXWembA4NoovzIrNVV7QzoL/+pLWul2SdAtzw0xUKYaltn04vpq6OlEjwaKsV</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">{&quot;r&quot;:[],&quot;c&quot;:[&quot;com.atlassian.servicedesk.frontend-webpack-plugin:17&quot;],&quot;xc&quot;:[&quot;jira.webresources:almond&quot;,&quot;customerportal&quot;,&quot;com.atlassian.analytics.analytics-client:js-events&quot;,&quot;async-chunk-cv-landing-page&quot;,&quot;browser-metrics-plugin.contrib&quot;],&quot;xr&quot;:[]}</queryString>
+    <java.net.URL>http://jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com/jira/rest/webResources/1.0/resources</java.net.URL>
+  </httpSample>
+  <httpSample t="197" lt="197" ts="1653592261031" s="true" lb="255 /rest/servicedesk/1/customer/models" rc="200" rm="" tn="Customers 1-2" dt="text" de="UTF-8" by="29552" ng="30" na="30">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Date: Thu, 26 May 2022 19:11:01 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: AWSALB=06tE3seJno/rUTS99jzRbTsQYxYONZnRcGjuLsLwYVmIM9AK/nDbJLh7hI4MUgerRormsJUQAnrUJoBRckyig8DmehCnagQHzi6TUWHQyDxxCzzBvQnxcCdTCspi; Expires=Thu, 02 Jun 2022 19:11:01 GMT; Path=/
+Set-Cookie: AWSALBCORS=06tE3seJno/rUTS99jzRbTsQYxYONZnRcGjuLsLwYVmIM9AK/nDbJLh7hI4MUgerRormsJUQAnrUJoBRckyig8DmehCnagQHzi6TUWHQyDxxCzzBvQnxcCdTCspi; Expires=Thu, 02 Jun 2022 19:11:01 GMT; Path=/; SameSite=None
+X-AREQUESTID: 1151x214601x2
+X-ASESSIONID: h2btfp
+X-ANODEID: i-06eea784279dd1059
+Referrer-Policy: strict-origin-when-cross-origin
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: sandbox
+Strict-Transport-Security: max-age=31536000
+X-Seraph-LoginReason: OK
+X-AUSERNAME: performance_customer_0_aadwibnccihoxox
+Cache-Control: no-cache, no-store, no-transform
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Accept: */*
+Content-Type: application/json
+Origin: http://jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com:80
+Content-Length: 323
+Host: jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.13)
+</requestHeader>
+    <java.net.URL>http://jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com/jira/rest/servicedesk/1/customer/models</java.net.URL>
+  </httpSample>
+  <httpSample t="3" lt="3" ts="1653592261228" s="true" lb="260 /rest/analytics/1.0/publish/bulk" rc="200" rm="" tn="Customers 1-2" dt="text" de="UTF-8" by="981" ng="30" na="30">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Date: Thu, 26 May 2022 19:11:01 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 0
+Connection: keep-alive
+Set-Cookie: AWSALB=xjEvPfzemMBdhXjTpGPDXDhJ0Ywy11M6HzewgS0C4uysqZf/JzLS0jr2ZgBc71xL4o2KYycBm28ZhTvzElcE41YEhwvbrA0d7lLtx8y16Ogxgh1MUhUnmQWhDtzg; Expires=Thu, 02 Jun 2022 19:11:01 GMT; Path=/
+Set-Cookie: AWSALBCORS=xjEvPfzemMBdhXjTpGPDXDhJ0Ywy11M6HzewgS0C4uysqZf/JzLS0jr2ZgBc71xL4o2KYycBm28ZhTvzElcE41YEhwvbrA0d7lLtx8y16Ogxgh1MUhUnmQWhDtzg; Expires=Thu, 02 Jun 2022 19:11:01 GMT; Path=/; SameSite=None
+X-AREQUESTID: 1151x214632x5
+X-ASESSIONID: h2btfp
+X-ANODEID: i-06eea784279dd1059
+Referrer-Policy: strict-origin-when-cross-origin
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: sandbox
+Strict-Transport-Security: max-age=31536000
+X-Seraph-LoginReason: OK
+X-AUSERNAME: performance_customer_0_aadwibnccihoxox
+Cache-Control: no-cache, no-store, no-transform
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Accept: application/json, text/javascript, */*; q=0.01
+Content-Type: application/json;
+Origin: http://jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com:80
+Content-Length: 2364
+Host: jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.13)
+</requestHeader>
+    <java.net.URL>http://jira-loadb-1v2wlury091su-2001390656.us-east-1.elb.amazonaws.com/jira/rest/analytics/1.0/publish/bulk</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+
+</testResults>
