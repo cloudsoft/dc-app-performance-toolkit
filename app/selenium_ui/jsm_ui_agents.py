@@ -1,7 +1,7 @@
 from selenium_ui.jsm import modules_agents
 import pytest
 from extension.jsm import extension_ui_agents  # noqa F401
-from aws import ping, opsitems
+from aws import opsitems
 from util.conf import JSM_SETTINGS
 
 
@@ -56,8 +56,8 @@ def test_1_selenium_agent_view_queues_medium(jsm_webdriver, jsm_datasets, jsm_sc
     modules_agents.view_queues_medium(jsm_webdriver, jsm_datasets)
 
 
-def test_1_selenium_aws_ping(jsm_webdriver, jsm_datasets, jsm_screen_shots):
-    ping.aws_ping(jsm_webdriver)
+#def test_1_selenium_aws_ping(jsm_webdriver, jsm_datasets, jsm_screen_shots):
+#    ping.aws_ping(jsm_webdriver)
 
 
 def test_1_selenium_aws_opsitems(jsm_webdriver, jsm_datasets, jsm_screen_shots):
