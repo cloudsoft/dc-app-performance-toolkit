@@ -1,0 +1,5 @@
+Created the tree successfully using /dc-app-performance-toolkit/app/jmeter/modified_jsm_customers.jmx
+Starting standalone test @ Mon May 30 09:33:00 UTC 2022 (1653903180182)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4446
+Tidying up ...    @ Mon May 30 10:21:08 UTC 2022 (1653906068345)
+... end of run
