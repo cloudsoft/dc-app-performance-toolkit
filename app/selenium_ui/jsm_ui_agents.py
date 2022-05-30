@@ -60,8 +60,8 @@ def test_1_selenium_agent_view_queues_medium(jsm_webdriver, jsm_datasets, jsm_sc
 #    ping.aws_ping(jsm_webdriver)
 
 
-def test_1_selenium_aws_opsitems(jsm_webdriver, jsm_datasets, jsm_screen_shots):
-    opsitems.aws_opsitems(jsm_webdriver)
+# def test_1_selenium_aws_opsitems(jsm_webdriver, jsm_datasets, jsm_screen_shots):
+#     opsitems.aws_opsitems(jsm_webdriver)
 
 """
 To enable specific tests for Insight below, set 'True' next to `insight` variable (False by default) in  `app/jsm.yml`
