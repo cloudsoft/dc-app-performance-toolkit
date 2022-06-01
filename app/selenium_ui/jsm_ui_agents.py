@@ -64,6 +64,7 @@ App specific tests
 """
 def test_1_selenium_aws_opsitems(jsm_webdriver, jsm_datasets, jsm_screen_shots):
     opsitems.aws_opsitems(jsm_webdriver)
+    modules_agents.login(jsm_webdriver, jsm_datasets)
 
 """
 To enable specific tests for Insight below, set 'True' next to `insight` variable (False by default) in  `app/jsm.yml`
