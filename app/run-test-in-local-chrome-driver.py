@@ -16,6 +16,6 @@ driver = webdriver.Chrome(executable_path="/usr/bin/chromedriver")
 jsm_datasets = Dataset().jsm_dataset()
 
 test_0_selenium_agent_a_login(driver, jsm_datasets, [])
-#test_1_selenium_aws_opsitems(driver, jsm_datasets, [])
+test_1_selenium_aws_opsitems(driver, jsm_datasets, [])
 test_1_selenium_agent_add_comment(driver, jsm_datasets, [])
 test_2_selenium_agent_z_logout(driver, jsm_datasets, [])
