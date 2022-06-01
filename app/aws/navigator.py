@@ -164,11 +164,9 @@ class Navigator:
                         severity: str,
                         category: str,
                         region: str) -> str:
-        page1 = CreateIssueFirstPage(self.driver)
-        page1.set_project(project)
-        page1.set_issue_type("AWS OpsItem")
-        page1.next()
         page2 = CreateOpsItemIssuePage(self.driver)
+        page2.set_project(project)
+        page2.set_issue_type("AWS OpsItem")
         page2.set_summary(summary)
         page2.set_description(description)
         page2.set_severity(severity)

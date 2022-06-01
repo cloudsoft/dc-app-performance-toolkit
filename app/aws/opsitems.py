@@ -30,7 +30,7 @@ def aws_opsitems(driver):
     @print_timing("selenium_aws_opsitem_create_and_resolve")
     def opsitems_create_and_resolve():
         """create an ops item issue and resolve it"""
-        driver.navigate().to('/jira/secure/CreateIssue!default.jspa')
+        #driver.navigate().to('/jira/secure/CreateIssue!default.jspa')
         issue_key = navigator.create_ops_item(
             project="AWS",
             summary="new ops item",
