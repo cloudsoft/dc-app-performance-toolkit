@@ -25,6 +25,10 @@ class PageElement:
         return By.CSS_SELECTOR, css_selector
 
     @staticmethod
+    def by_id(id: str) -> Locator:
+        return By.ID, id
+
+    @staticmethod
     def by_button_text(text: str) -> Locator:
         return By.XPATH, text
 
