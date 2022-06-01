@@ -38,5 +38,5 @@ def aws_opsitems(driver):
             severity="4 - Low",
             category="Performance",
             region="eu-central-1")
-        navigator.resolve_issue(issue_key)
+        #navigator.resolve_issue(issue_key)
     opsitems_create_and_resolve()

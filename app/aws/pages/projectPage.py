@@ -1,20 +1,13 @@
-from .basePage import BasePage
-from .pageElements import PageElement
+from selenium.webdriver.common.by import By
+
+from selenium_ui.base_page import BasePage
+from selenium_ui.jira.pages.selectors import UrlManager
 
 
 class ProjectPage(BasePage):
+    page_loaded_selector =  (By.CLASS_NAME, 'sd-queue-table-container table td')
 
-    PROJECT_TITLE = PageElement.by_css_selector(".jira-project-avatar")
-    PROJECT_SETTINGS = PageElement.by_css_selector(".aui-sidebar-settings-button")
-
-    @property
-    def project_title(self):
-        avatar = self.find_element(self.PROJECT_TITLE)
-        return avatar.get_attribute("title")
-
-    def delete_project(self):
-        self.click(self.PROJECT_SETTINGS)
-        self.click(PageElement.by_css_selector("#view_delete_project"))
-        self.click(PageElement.by_css_selector('#delete-project-confirm-submit'))
-        # wait for Acknowledge button
-        self.click(PageElement.by_css_selector("#acknowledge-submit"))
+    def __init__(self, driver, project_key):
+        BasePage.__init__(self, driver)
+        url_manager = UrlManager(project_key=project_key)
+        self.page_url = url_manager.project_summary_url()

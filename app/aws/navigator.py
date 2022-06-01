@@ -1,9 +1,12 @@
-import os
+import json
 import time
 
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.keys import Keys
 
+from selenium_ui.conftest import print_timing
+from selenium_ui.jira.pages.pages import Issue, Project
+from selenium_ui.jira.pages.selectors import IssueLocators
 from selenium_ui.jsm.pages.agent_pages import Login
 from util.conf import BaseAppSettings
 from .pages.accountDetailsPage import AccountDetailsPage
@@ -12,7 +15,6 @@ from .pages.adminProjectsPage import AdminProjectsPage, ProjectNotFoundError
 from .pages.connectAccountPage import AccountDetails
 from .pages.connectorSettingsPage import ConnectorSettingsPage
 from .pages.createIssueFirstPage import CreateIssueFirstPage
-from .pages.createOpsItemIssuePage import CreateOpsItemIssuePage
 from .pages.loggedInPage import LoggedInPage
 from .pages.manageAppsPage import ManageAppsPage
 from .pages.projectPage import ProjectPage
@@ -164,22 +166,51 @@ class Navigator:
                         severity: str,
                         category: str,
                         region: str) -> str:
-        self.driver.get('http://jira-loadb-1pa42s1qhry91-1464399170.us-east-1.elb.amazonaws.com/jira/secure/CreateIssue!default.jspa')
-        page1 = CreateIssueFirstPage(self.driver)
-        page1.set_project(project)
-        page1.set_issue_type("AWS OpsItem")
-        page1.next()
-        page2 = CreateOpsItemIssuePage(self.driver)
-        page2.set_summary(summary)
-        page2.set_description(description)
-        page2.set_severity(severity)
-        page2.set_category(category)
-        page2.set_region(region)
-        page2.create()
-        issue_page = ViewIssuePage(self.driver)
-        issue_key = issue_page.issue_key
-        self.last_page = "issue_page_" + issue_key
-        return issue_key
+        @print_timing("load_aws_project")
+        def load_aws_project():
+            project_page = ProjectPage(self.driver, project_key=project)
+            project_page.go_to()
+            project_page.wait_for_page_loaded()
+        load_aws_project()
+
+        @print_timing("load_aws_create_issue_modal")
+        def load_aws_create_issue_modal():
+            issue_modal = Issue(self.driver)
+            issue_modal.open_create_issue_modal()
+        load_aws_create_issue_modal()
+
+
+            # data_suggestions = json.loads(issue_modal.get_element(IssueLocators.issue_types_options)
+            #                               .get_attribute('data-suggestions'))
+            # issue_types = {}
+            # for data in data_suggestions:
+            #     if 'Please select' not in str(data):
+            #         items = data['items']
+            #         for label in items:
+            #             if label['label'] not in issue_types:
+            #                 issue_types[label['label']] = label['selected']
+            # issue_modal.action_chains().move_to_element(IssueLocators.issue_type_field)
+            # issue_modal.get_element(IssueLocators.issue_type_field).click()
+            # issue_dropdown_elements = issue_modal.get_elements(IssueLocators.issue_type_dropdown_elements)
+            # if issue_dropdown_elements:
+            #     print(issue_dropdown_elements)
+
+        # self.driver.get('http://jira-loadb-1pa42s1qhry91-1464399170.us-east-1.elb.amazonaws.com/jira/secure/CreateIssue!default.jspa')
+        # page1 = CreateIssueFirstPage(self.driver)
+        # page1.set_project(project)
+        # page1.set_issue_type("AWS OpsItem")
+        # page1.next()
+        # page2 = CreateOpsItemIssuePage(self.driver)
+        # page2.set_summary(summary)
+        # page2.set_description(description)
+        # page2.set_severity(severity)
+        # page2.set_category(category)
+        # page2.set_region(region)
+        # page2.create()
+        # issue_page = ViewIssuePage(self.driver)
+        # issue_key = issue_page.issue_key
+        # self.last_page = "issue_page_" + issue_key
+        # return issue_key
 
     def resolve_issue(self, issue_key: str) -> None:
         issue_page = self.issue_page(issue_key)
