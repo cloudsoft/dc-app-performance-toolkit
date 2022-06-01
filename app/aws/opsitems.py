@@ -39,8 +39,3 @@ def aws_opsitems(driver):
             region="eu-central-1")
         navigator.resolve_issue(issue_key)
     opsitems_create_and_resolve()
-
-    # def test_ops_item_find_and_mark_in_progress(self):
-    #     """Search for any open OpsItem issue and mark as in progress"""
-    #     issue_key = self.navigator.find_open_ops_item(self.project_key)
-    #     self.navigator.in_progress_issue(issue_key)
