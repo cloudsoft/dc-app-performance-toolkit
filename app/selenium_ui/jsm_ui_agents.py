@@ -106,14 +106,13 @@ def test_1_selenium_agent_insight_view_issue_with_objects(jsm_webdriver, jsm_dat
     modules_agents.view_issue_with_insight_objects(jsm_webdriver, jsm_datasets)
 
 
-# this action should be the last one
-def test_2_selenium_agent_z_logout(jsm_webdriver, jsm_datasets, jsm_screen_shots):
-    modules_agents.logout(jsm_webdriver, jsm_datasets)
-
-
 """
-App specific tests - run as admin
+App specific tests
 """
 def test_3_selenium_aws_opsitems(jsm_webdriver, jsm_datasets, jsm_screen_shots):
     opsitems.aws_opsitems(jsm_webdriver)
+
+
+# this action should be the last one
+def test_2_selenium_agent_z_logout(jsm_webdriver, jsm_datasets, jsm_screen_shots):
     modules_agents.logout(jsm_webdriver, jsm_datasets)
