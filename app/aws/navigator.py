@@ -21,6 +21,7 @@ from .pages.connectorSettingsPage import ConnectorSettingsPage
 from .pages.createIssueFirstPage import CreateIssueFirstPage
 from .pages.loggedInPage import LoggedInPage
 from .pages.manageAppsPage import ManageAppsPage
+from .pages.pageElements import PageElement, Locator
 from .pages.projectPage import ProjectPage
 from .pages.viewIssuePage import ViewIssuePage
 
@@ -213,20 +214,12 @@ class Navigator:
                     issue_modal.get_element(IssueLocators.issue_description_field).send_keys(description)
             set_aws_opsitem_description()
 
-            time.sleep(20)
+            @print_timing("submit_aws_opsitem")
+            def submit_aws_opsitem():
+                issue_modal.submit_issue()
+            submit_aws_opsitem()
 
         load_aws_create_issue_modal()
-
-        # page2.set_summary(summary)
-        # page2.set_description(description)
-        # page2.set_severity(severity)
-        # page2.set_category(category)
-        # page2.set_region(region)
-        # page2.create()
-        # issue_page = ViewIssuePage(self.driver)
-        # issue_key = issue_page.issue_key
-        # self.last_page = "issue_page_" + issue_key
-        # return issue_key
 
     def resolve_issue(self, issue_key: str) -> None:
         issue_page = self.issue_page(issue_key)
@@ -266,4 +259,5 @@ class Navigator:
             self.last_page = "issue_search"
         return ViewIssuePage(self.driver)
 
-
+    def custom_field_locator(self, label: str) -> Locator:
+        return PageElement.by_xpath(f"//label[text()='{label}']/../select")
