@@ -59,6 +59,14 @@ def test_1_selenium_agent_view_queues_medium(jsm_webdriver, jsm_datasets, jsm_sc
 def test_1_selenium_agent_view_queues_small(jsm_webdriver, jsm_datasets, jsm_screen_shots):
      modules_agents.view_queues_small(jsm_webdriver, jsm_datasets)
 
+
+"""
+App specific tests
+"""
+def test_1_selenium_aws_opsitems(jsm_webdriver, jsm_datasets, jsm_screen_shots):
+    opsitems.aws_opsitems(jsm_webdriver)
+
+
 """
 To enable specific tests for Insight below, set 'True' next to `insight` variable (False by default) in  `app/jsm.yml`
 """
@@ -104,13 +112,6 @@ def test_1_selenium_agent_insight_view_issue_with_objects(jsm_webdriver, jsm_dat
     if not JSM_SETTINGS.insight:
         pytest.skip()
     modules_agents.view_issue_with_insight_objects(jsm_webdriver, jsm_datasets)
-
-
-"""
-App specific tests
-"""
-def test_1_selenium_aws_opsitems(jsm_webdriver, jsm_datasets, jsm_screen_shots):
-    opsitems.aws_opsitems(jsm_webdriver)
 
 
 # this action should be the last one
