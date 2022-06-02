@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<sample t="7" lt="0" ts="1654172628240" s="false" lb="jmeter_customer_share_request_with_customer:add_customer" rc="400" rm="Number of samples in transaction : 1, number of failing samples : 1" tn="Customers 1-27" dt="" de="" by="1127" ng="30" na="30">
+  <httpSample t="7" lt="7" ts="1654172628241" s="false" lb="430 /rest/servicedesk/1/customer/participants/AWS-343/share" rc="400" rm="" tn="Customers 1-27" dt="text" de="UTF-8" by="1127" ng="30" na="30">
+    <responseHeader class="java.lang.String">HTTP/1.1 400 
+Date: Thu, 02 Jun 2022 12:23:48 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: AWSALB=T7uGFUkaYur8BbEHfCmm+UuBXBTSG9IHJzUL+E9nf48lP7jkwD+q8uzSbSL5oCdfpNkqy7X7ir2jbOjFcwhv0d2v2A6nSb/7oGUgBToAMB6dNOrTsvTNiqSPKk5S; Expires=Thu, 09 Jun 2022 12:23:48 GMT; Path=/
+Set-Cookie: AWSALBCORS=T7uGFUkaYur8BbEHfCmm+UuBXBTSG9IHJzUL+E9nf48lP7jkwD+q8uzSbSL5oCdfpNkqy7X7ir2jbOjFcwhv0d2v2A6nSb/7oGUgBToAMB6dNOrTsvTNiqSPKk5S; Expires=Thu, 09 Jun 2022 12:23:48 GMT; Path=/; SameSite=None
+X-AREQUESTID: 743x676481x2
+X-ASESSIONID: 1xwxomo
+X-ANODEID: i-01ec0953c89605d85
+Referrer-Policy: strict-origin-when-cross-origin
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: sandbox
+Strict-Transport-Security: max-age=31536000
+X-Seraph-LoginReason: OK
+X-AUSERNAME: performance_customer_0_aolqnqbxopryvje
+Cache-Control: no-cache, no-store, no-transform
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Accept: */*
+Content-Type: application/json
+Origin: http://jira-loadb-1pa42s1qhry91-1464399170.us-east-1.elb.amazonaws.com:80
+Content-Length: 60
+Host: jira-loadb-1pa42s1qhry91-1464399170.us-east-1.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.13)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errors&quot;:[{&quot;errorMessage&quot;:&quot;Unable to get user.&quot;}],&quot;reasonKey&quot;:&quot;sd.admin.servicedesk.error.user.not.exist&quot;,&quot;reasonCode&quot;:&quot;400&quot;}</responseData>
+    <cookies class="java.lang.String">JSESSIONID=28BC40DEB9E9FFBAEFA9DC232F719972; seraph.rememberme.cookie=15156%3Aa63d4c6248a0c4fb6ced0dc4e3dcdae9a53e8b4b; atlassian.xsrf.token=BM5I-V73Y-TB4U-V4LJ_8d84f26f4d4d676ad2dc8fd26e5e58fafb5658f0_lin; AWSALB=3N09X1mdMfh5r4ZGl1spAvgnpQ5bowlIIBewnyauXpPhQafgQb6MCqkD8RwhNAe4gTT0dQGcLS8gy8pJvECQtiOdBN0Kn8c0wDlaq8R3rFSOQBqQPX5eV1MhQufs; AWSALBCORS=3N09X1mdMfh5r4ZGl1spAvgnpQ5bowlIIBewnyauXpPhQafgQb6MCqkD8RwhNAe4gTT0dQGcLS8gy8pJvECQtiOdBN0Kn8c0wDlaq8R3rFSOQBqQPX5eV1MhQufs</cookies>
+    <method class="java.lang.String">PUT</method>
+    <queryString class="java.lang.String">{&quot;usernames&quot;:[&quot;NOT_FOUND&quot;],&quot;organisationIds&quot;:[],&quot;emails&quot;:[]}</queryString>
+    <java.net.URL>http://jira-loadb-1pa42s1qhry91-1464399170.us-east-1.elb.amazonaws.com/jira/rest/servicedesk/1/customer/participants/AWS-343/share</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+<sample t="149" lt="0" ts="1654172628253" s="false" lb="jmeter_customer_share_request_with_customer:remove_customer" rc="400" rm="Number of samples in transaction : 2, number of failing samples : 1" tn="Customers 1-27" dt="" de="" by="9523" ng="30" na="30">
+  <httpSample t="5" lt="5" ts="1654172628254" s="false" lb="450 /rest/servicedesk/1/servicedesk/customer/participant/removeParticipant" rc="400" rm="" tn="Customers 1-27" dt="text" de="UTF-8" by="1105" ng="30" na="30">
+    <responseHeader class="java.lang.String">HTTP/1.1 400 
+Date: Thu, 02 Jun 2022 12:23:48 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: AWSALB=FfkuLV4oq0T0FV3Y7SN0xFblbFI8YCtmaVL8LE3hqD1+WhJcubAlLL12ot8RL+PUbt7L2LNUI8HK0dUZsqydSRyc7hjrg8XFg0QeMrlAIIow0EXsu1sePEoJSK8C; Expires=Thu, 09 Jun 2022 12:23:48 GMT; Path=/
+Set-Cookie: AWSALBCORS=FfkuLV4oq0T0FV3Y7SN0xFblbFI8YCtmaVL8LE3hqD1+WhJcubAlLL12ot8RL+PUbt7L2LNUI8HK0dUZsqydSRyc7hjrg8XFg0QeMrlAIIow0EXsu1sePEoJSK8C; Expires=Thu, 09 Jun 2022 12:23:48 GMT; Path=/; SameSite=None
+X-AREQUESTID: 743x676482x2
+X-ASESSIONID: 1xwxomo
+X-ANODEID: i-01ec0953c89605d85
+Referrer-Policy: strict-origin-when-cross-origin
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: sandbox
+Strict-Transport-Security: max-age=31536000
+X-Seraph-LoginReason: OK
+X-AUSERNAME: performance_customer_0_aolqnqbxopryvje
+Cache-Control: no-cache, no-store, no-transform
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Accept: */*
+Content-Type: application/json
+Origin: http://jira-loadb-1pa42s1qhry91-1464399170.us-east-1.elb.amazonaws.com:80
+Content-Length: 23
+Host: jira-loadb-1pa42s1qhry91-1464399170.us-east-1.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.13)
+</requestHeader>
+    <responseData class="java.lang.String">{&quot;errors&quot;:[{&quot;errorMessage&quot;:&quot;Unable to get user.&quot;}],&quot;reasonKey&quot;:&quot;Unable to get user.&quot;,&quot;reasonCode&quot;:&quot;400&quot;}</responseData>
+    <cookies class="java.lang.String">JSESSIONID=28BC40DEB9E9FFBAEFA9DC232F719972; seraph.rememberme.cookie=15156%3Aa63d4c6248a0c4fb6ced0dc4e3dcdae9a53e8b4b; atlassian.xsrf.token=BM5I-V73Y-TB4U-V4LJ_8d84f26f4d4d676ad2dc8fd26e5e58fafb5658f0_lin; AWSALB=T7uGFUkaYur8BbEHfCmm+UuBXBTSG9IHJzUL+E9nf48lP7jkwD+q8uzSbSL5oCdfpNkqy7X7ir2jbOjFcwhv0d2v2A6nSb/7oGUgBToAMB6dNOrTsvTNiqSPKk5S; AWSALBCORS=T7uGFUkaYur8BbEHfCmm+UuBXBTSG9IHJzUL+E9nf48lP7jkwD+q8uzSbSL5oCdfpNkqy7X7ir2jbOjFcwhv0d2v2A6nSb/7oGUgBToAMB6dNOrTsvTNiqSPKk5S</cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">{&quot;userKey&quot;:&quot;NOT_FOUND&quot;}</queryString>
+    <java.net.URL>http://jira-loadb-1pa42s1qhry91-1464399170.us-east-1.elb.amazonaws.com/jira/rest/servicedesk/1/servicedesk/customer/participant/removeParticipant/AWS-343</java.net.URL>
+  </httpSample>
+  <httpSample t="144" lt="144" ts="1654172628259" s="true" lb="460 /rest/servicedesk/1/customer/models" rc="200" rm="" tn="Customers 1-27" dt="text" de="UTF-8" by="8418" ng="30" na="30">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 
+Date: Thu, 02 Jun 2022 12:23:48 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: AWSALB=JjJYExMScUXW6uWr0JtCyFY3qsX3anuEAwus8dpFPOBe5zqNCLJ1XP9wU81sMuJF0+/YOFmHj919WHotR6b4CSmJUsRagnBYgvgREHy+QlkZ6+5JjhsXKx0KyBYD; Expires=Thu, 09 Jun 2022 12:23:48 GMT; Path=/
+Set-Cookie: AWSALBCORS=JjJYExMScUXW6uWr0JtCyFY3qsX3anuEAwus8dpFPOBe5zqNCLJ1XP9wU81sMuJF0+/YOFmHj919WHotR6b4CSmJUsRagnBYgvgREHy+QlkZ6+5JjhsXKx0KyBYD; Expires=Thu, 09 Jun 2022 12:23:48 GMT; Path=/; SameSite=None
+X-AREQUESTID: 743x676483x2
+X-ASESSIONID: 1xwxomo
+X-ANODEID: i-01ec0953c89605d85
+Referrer-Policy: strict-origin-when-cross-origin
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: sandbox
+Strict-Transport-Security: max-age=31536000
+X-Seraph-LoginReason: OK
+X-AUSERNAME: performance_customer_0_aolqnqbxopryvje
+Cache-Control: no-cache, no-store, no-transform
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Accept: */*
+Content-Type: application/json
+Origin: http://jira-loadb-1pa42s1qhry91-1464399170.us-east-1.elb.amazonaws.com:80
+Content-Length: 247
+Host: jira-loadb-1pa42s1qhry91-1464399170.us-east-1.elb.amazonaws.com
+User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.13)
+</requestHeader>
+    <java.net.URL>http://jira-loadb-1pa42s1qhry91-1464399170.us-east-1.elb.amazonaws.com/jira/rest/servicedesk/1/customer/models</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+</sample>
+
+</testResults>

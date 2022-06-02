@@ -1,0 +1,90 @@
+Summary run status                                                                  FAIL
+               
+Artifacts dir                                                                       2022-06-02_12-18-31 
+OS                                                                                  Linux               
+DC Apps Performance Toolkit version                                                 6.2.1 (OK: Toolkit is up to date)
+Application                                                                         jsm 4.20.8          
+Dataset info                                                                        1042932 issues      
+Application nodes count                                                             2                   
+Concurrency                                                                         80                  
+Expected test run duration from yml file                                            2700 sec            
+Actual test run duration                                                            2921 sec            
+Finished                                                                            (True, 'OK')        
+Compliant                                                                           (False, '')         
+Success                                                                             (False, 'One or more actions have success rate < 95.0 %.')
+Has app-specific actions                                                            True                
+Insight                                                                             False               
+
+Action                                                                             Success Rate        90th Percentile     Status              
+jmeter_agent_login_and_view_dashboard                                               100.0               0.48                OK                  
+jmeter_agent_add_comment:open_request_comment                                       100.0               0.02                OK                  
+jmeter_agent_add_comment:save_request_comment                                       100.0               0.42                OK                  
+jmeter_agent_view_request                                                           100.0               0.28                OK                  
+jmeter_agent_browse_projects                                                        100.0               0.07                OK                  
+jmeter_agent_view_customers                                                         100.0               0.74                OK                  
+jmeter_agent_view_queues_small:all_open_queue                                       100.0               1.25                OK                  
+jmeter_agent_view_queues_small:random_queue                                         100.0               0.35                OK                  
+jmeter_agent_view_report_workload_small                                             100.0               2.22                OK                  
+jmeter_agent_view_queues_medium:all_open_queue                                      0.0                 1.22                Fail                
+jmeter_agent_view_queues_medium:random_queue                                        100.0               0.36                OK                  
+jmeter_agent_view_report_workload_medium                                            100.0               1.51                OK                  
+jmeter_agent_view_report_created_vs_resolved_medium                                 100.0               0.2                 OK                  
+jmeter_agent_view_report_created_vs_resolved_small                                  100.0               0.18                OK                  
+jmeter_customer_login_and_view_portals                                              100.0               0.66                OK                  
+jmeter_customer_view_requests:my_requests                                           100.0               0.29                OK                  
+jmeter_customer_view_requests:all_requests                                          100.0               0.3                 OK                  
+jmeter_customer_view_request                                                        100.0               0.57                OK                  
+jmeter_customer_view_requests:with_filter_requests                                  100.0               0.3                 OK                  
+jmeter_customer_add_comment                                                         100.0               0.19                OK                  
+jmeter_customer_view_portal                                                         100.0               0.11                OK                  
+jmeter_customer_create_request:open_create_request_view                             100.0               0.11                OK                  
+jmeter_customer_create_request:create_request                                       100.0               0.51                OK                  
+jmeter_customer_create_request:view_request_after_creation                          100.0               0.15                OK                  
+jmeter_customer_share_request_with_org:search_org                                   100.0               0.03                OK                  
+jmeter_customer_share_request_with_org:add_org                                      100.0               1.09                OK                  
+jmeter_customer_share_request_with_org:remove_org                                   100.0               1.19                OK                  
+jmeter_customer_share_request_with_customer:search_customer                         100.0               0.04                OK                  
+jmeter_customer_share_request_with_customer:add_customer                            100.0               1.03                OK                  
+jmeter_customer_share_request_with_customer:remove_customer                         100.0               1.59                OK                  
+selenium_customer_login:open_login_page                                             100.0               0.16                OK                  
+selenium_agent_login:open_login_page                                                100.0               0.2                 OK                  
+selenium_customer_login:login_and_view_portal                                       100.0               0.88                OK                  
+selenium_customer_login                                                             100.0               1.02                OK                  
+selenium_agent_login:login_and_view_dashboard                                       100.0               0.82                OK                  
+selenium_agent_login                                                                100.0               1.01                OK                  
+selenium_agent_browse_projects                                                      100.0               0.35                OK                  
+selenium_customer_create_request:browse_all_portals                                 100.0               0.69                OK                  
+selenium_customer_create_request:view_portal                                        100.0               0.24                OK                  
+selenium_agent_view_customers                                                       100.0               0.88                OK                  
+selenium_customer_create_request:choose_request_type                                100.0               0.76                OK                  
+selenium_customer_create_request:create_and_submit_request                          100.0               0.62                OK                  
+selenium_customer_create_request                                                    100.0               2.2                 OK                  
+selenium_customer_view_request                                                      100.0               0.6                 OK                  
+selenium_agent_view_request                                                         100.0               0.86                OK                  
+selenium_agent_view_report_workload_medium                                          100.0               1.96                OK                  
+selenium_agent_view_report_created_vs_resolved_medium                               100.0               0.83                OK                  
+selenium_agent_view_report_workload_small                                           100.0               3.2                 OK                  
+selenium_agent_view_report_created_vs_resolved_small                                100.0               0.89                OK                  
+selenium_customer_view_requests                                                     100.0               0.59                OK                  
+selenium_customer_view_all_requests                                                 100.0               0.57                OK                  
+selenium_agent_add_comment:add comment                                              100.0               0.66                OK                  
+selenium_agent_add_comment                                                          100.0               1.36                OK                  
+selenium_customer_share_request_with_customer:search_for_customer_to_share_with     100.0               2.69                OK                  
+selenium_customer_share_request:share_request_with_customer                         100.0               2.12                OK                  
+selenium_customer_share_request_with_customer                                       100.0               4.79                OK                  
+selenium_agent_view_queues_large_project_:all_open_queue                            100.0               2.06                OK                  
+selenium_agent_view_queues_large_project:random_choice_queue                        100.0               0.37                OK                  
+selenium_agent_view_queues_large_project                                            100.0               2.37                OK                  
+selenium_customer_add_comment                                                       100.0               2.02                OK                  
+selenium_customer_log_out                                                           100.0               0.63                OK                  
+selenium_agent_view_queues_small_project_:all_open_queue                            100.0               2.18                OK                  
+selenium_agent_view_queues_small_project:random_choice_queue                        100.0               0.4                 OK                  
+selenium_agent_view_queues_small_project                                            100.0               2.48                OK                  
+selenium_agent_logout                                                               100.0               0.61                OK                  
+load_aws_project                                                                    100.0               1.8                 OK                  APP-SPECIFIC        
+select_aws_opsitem_issue_type                                                       100.0               0.16                OK                  APP-SPECIFIC        
+set_aws_opsitem_summary                                                             100.0               0.08                OK                  APP-SPECIFIC        
+set_aws_opsitem_description                                                         100.0               0.15                OK                  APP-SPECIFIC        
+submit_aws_opsitem                                                                  100.0               0.68                OK                  APP-SPECIFIC        
+load_aws_create_issue_modal                                                         100.0               1.8                 OK                  APP-SPECIFIC        
+selenium_aws_opsitem                                                                100.0               3.61                OK                  APP-SPECIFIC        
