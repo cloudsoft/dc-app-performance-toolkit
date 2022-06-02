@@ -1,8 +1,11 @@
 import json
 import time
+from typing import List
 
 from selenium.webdriver.chrome.webdriver import WebDriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.remote.webelement import WebElement
 
 from selenium_ui.conftest import print_timing
 from selenium_ui.jira.pages.pages import Issue, Project
@@ -177,30 +180,29 @@ class Navigator:
         def load_aws_create_issue_modal():
             issue_modal = Issue(self.driver)
             issue_modal.open_create_issue_modal()
+
+            @print_timing("select_aws_opsitem_issue_type")
+            def select_aws_opsitem_issue_type():
+                issue_modal.get_element(IssueLocators.issue_type_field).click()
+                issue_dropdown_elements: List[WebElement] = issue_modal.get_elements(IssueLocators.issue_type_dropdown_elements)
+                if issue_dropdown_elements:
+                    for element in issue_dropdown_elements:
+                        cls = element.get_attribute('class')
+                        print(f'cls: {cls}')
+                        if 'aui-list-item-li-aws-opsitem' in cls:
+                            issue_modal.action_chains().move_to_element(element).click(element).perform()
+                issue_modal.wait_until_invisible(IssueLocators.issue_ready_to_save_spinner)
+            select_aws_opsitem_issue_type()
+
+            @print_timing("set aws_opsitem_summary")
+            def set_aws_opsitem_summary():
+                issue_modal.wait_until_clickable(IssueLocators.issue_summary_field).send_keys(summary)
+            set_aws_opsitem_summary()
+
+            time.sleep(20)
+
         load_aws_create_issue_modal()
 
-
-            # data_suggestions = json.loads(issue_modal.get_element(IssueLocators.issue_types_options)
-            #                               .get_attribute('data-suggestions'))
-            # issue_types = {}
-            # for data in data_suggestions:
-            #     if 'Please select' not in str(data):
-            #         items = data['items']
-            #         for label in items:
-            #             if label['label'] not in issue_types:
-            #                 issue_types[label['label']] = label['selected']
-            # issue_modal.action_chains().move_to_element(IssueLocators.issue_type_field)
-            # issue_modal.get_element(IssueLocators.issue_type_field).click()
-            # issue_dropdown_elements = issue_modal.get_elements(IssueLocators.issue_type_dropdown_elements)
-            # if issue_dropdown_elements:
-            #     print(issue_dropdown_elements)
-
-        # self.driver.get('http://jira-loadb-1pa42s1qhry91-1464399170.us-east-1.elb.amazonaws.com/jira/secure/CreateIssue!default.jspa')
-        # page1 = CreateIssueFirstPage(self.driver)
-        # page1.set_project(project)
-        # page1.set_issue_type("AWS OpsItem")
-        # page1.next()
-        # page2 = CreateOpsItemIssuePage(self.driver)
         # page2.set_summary(summary)
         # page2.set_description(description)
         # page2.set_severity(severity)
