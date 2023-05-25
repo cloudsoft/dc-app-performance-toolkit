@@ -5,7 +5,7 @@ from selenium_ui.jira.pages.selectors import UrlManager
 
 
 class ProjectPage(BasePage):
-    page_loaded_selector =  (By.CLASS_NAME, 'sd-queue-table-container table td')
+    page_loaded_selector =  (By.CSS_SELECTOR, '.sd-queue-table-container table td')
 
     def __init__(self, driver, project_key):
         BasePage.__init__(self, driver)
