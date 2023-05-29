@@ -9,9 +9,11 @@ from selenium import webdriver
 
 from selenium_ui.conftest import Dataset
 from selenium_ui.jsm_ui_agents import test_0_selenium_agent_a_login, \
-    test_1_selenium_aws_opsitems, test_2_selenium_agent_z_logout, test_1_selenium_agent_add_comment
+    test_2_selenium_agent_z_logout, test_1_selenium_agent_add_comment
 
-driver = webdriver.Chrome(executable_path="/usr/bin/chromedriver")
+from selenium_ui.jsm_ui_agents import test_1_selenium_aws_opsitems
+
+driver = webdriver.Chrome(executable_path="../chromedriver")
 
 jsm_datasets = Dataset().jsm_dataset()
 
