@@ -1,6 +1,7 @@
 from selenium_ui.jsm import modules_agents
 import pytest
 from extension.jsm import extension_ui_agents  # noqa F401
+from aws import opsitems
 from util.conf import JSM_SETTINGS
 
 
@@ -56,16 +57,15 @@ def test_1_selenium_agent_view_queues_medium(jsm_webdriver, jsm_datasets, jsm_sc
 
 
 def test_1_selenium_agent_view_queues_small(jsm_webdriver, jsm_datasets, jsm_screen_shots):
-    modules_agents.view_queues_small(jsm_webdriver, jsm_datasets)
+     modules_agents.view_queues_small(jsm_webdriver, jsm_datasets)
 
 
 """
-Add custom actions anywhere between login and log out action. Move this to a different line as needed.
-Write your custom selenium scripts in `app/extension/jsm/extension_ui_agents.py`.
-Refer to `app/selenium_ui/jsm/modules_agents.py` for examples.
+App specific tests
 """
-# def test_1_selenium_agent_custom_action(jsm_webdriver, jsm_datasets, jsm_screen_shots):
-#     extension_ui_agents.app_specific_action(jsm_webdriver, jsm_datasets)
+def test_1_selenium_aws_opsitems(jsm_webdriver, jsm_datasets, jsm_screen_shots):
+    opsitems.aws_opsitems(jsm_webdriver)
+
 
 """
 To enable specific tests for Insight below, set 'True' next to `insight` variable (False by default) in  `app/jsm.yml`
