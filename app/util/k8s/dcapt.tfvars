@@ -10,13 +10,13 @@
 # Unique name of your enterprise-scale test cluster.
 # This value can not be altered after the configuration has been applied.
 # ! REQUIRED !
-environment_name = "dcapt-product"
+environment_name = "dc-app-performance-24"
 
 # Supported products: jira, confluence, bitbucket, crowd and bamboo.
 # For JSM set product as jira.
 # e.g.: products = ["jira"]
 # ! REQUIRED !
-products = ["product-to-deploy"]
+products = ["jira"]
 
 # License
 # To avoid storing license in a plain text file, we recommend storing it in an environment variable prefixed with `TF_VAR_` (i.e. `TF_VAR_jira_license`) and keep the below line commented out
@@ -101,19 +101,19 @@ test_deployment_mem_limit = "8Gi"
 # - "atlassian/jira-servicemanagement"
 #
 # Jira
-jira_image_repository = "atlassian/jira-software"
+# jira_image_repository = "atlassian/jira-software"
 
 # JSM
 # ! REQUIRED for JSM !
-# jira_image_repository = "atlassian/jira-servicemanagement"
+jira_image_repository = "atlassian/jira-servicemanagement"
 
 # Supported versions by DCAPT: https://github.com/atlassian/dc-app-performance-toolkit#supported-versions
 # Jira version
-jira_version_tag = "9.12.4"
+# jira_version_tag = "9.12.4"
 
 # JSM version
 # ! REQUIRED for JSM !
-# jira_version_tag = "5.12.4"
+jira_version_tag = "5.12.4"
 
 # Dataset size. Used only when snapshots_json_file_path is defined. Defaults to large.
 jira_dataset_size = "large"

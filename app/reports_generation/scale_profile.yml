@@ -5,13 +5,13 @@ runs:
   # E.g. relativePath: "./app/results/jira/2024-01-01_10-10-10"
   - runName: "1 Node"
     runType: "baseline"
-    fullPath: "/Users/thomasbouron/dc-app-performance-toolkit/master/run-3"
+    relativePath: "./app/results/jsm/2024-05-10_18-28-39"
   - runName: "2 Nodes"
     runType: "experiment"
-    fullPath: "/Users/thomasbouron/dc-app-performance-toolkit/master/run-4"
+    relativePath: "./app/results/jsm/2024-05-10_20-28-35"
   - runName: "4 Nodes"
     runType: "experiment"
-    fullPath: "/Users/thomasbouron/dc-app-performance-toolkit/master/run-5"
+    relativePath: "./app/results/jsm/2024-05-10_21-40-36"
 
 # Chart generation configs
 index_col: "Action"

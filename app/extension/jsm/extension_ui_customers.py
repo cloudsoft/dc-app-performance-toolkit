@@ -5,6 +5,8 @@ from selenium_ui.conftest import print_timing
 from selenium_ui.jsm.pages.customer_pages import Login
 from util.conf import JSM_SETTINGS
 
+from aws import aws_modules_customers
+
 
 def app_specific_action(webdriver, datasets):
     page = BasePage(webdriver)
@@ -12,20 +14,31 @@ def app_specific_action(webdriver, datasets):
         custom_request_key = datasets['custom_issue_key']
         custom_service_desk_id = datasets['custom_service_desk_id']
 
+    # TODO: All variables below should come from the dataset. At least, they should be updated to match the ones from the instance under test
+    custom_request_key = 'AWS-100'
+    custom_service_desk_id = '202'
+    # Customfield ID for `AWS Region` on the `AWS OpsItem` issue/request type
+    custom_field_id = 'customfield_10811'
+
     # To run action as specific user uncomment code bellow.
     # NOTE: If app_specific_action is running as specific user, make sure that app_specific_action is running
     # just before test_2_selenium_z_log_out action
 
-    # @print_timing("selenium_app_specific_user_login")
-    # def measure():
-    #     def app_specific_user_login(username='admin', password='admin'):
-    #         login_page = Login(webdriver)
-    #         login_page.delete_all_cookies()
-    #         login_page.go_to()
-    #         login_page.set_credentials(username=username, password=password)
-    #         login_page.wait_for_page_loaded()
-    #     app_specific_user_login(username='admin', password='admin')
-    # measure()
+    @print_timing("selenium_app_specific_user_login")
+    def measure():
+        def app_specific_user_login(username='admin', password='admin'):
+            login_page = Login(webdriver)
+            login_page.delete_all_cookies()
+            login_page.go_to()
+            login_page.set_credentials(username=username, password=password)
+            login_page.wait_for_page_loaded()
+        app_specific_user_login(username='admin', password='admin')
+    measure()
+
+    @print_timing("selenium_customer_aws_create_opsitem_reques")
+    def measure():
+        aws_modules_customers.create_opsitem_request(webdriver, datasets)
+    measure()
 
     @print_timing("selenium_customer_app_custom_action")
     def measure():
@@ -37,6 +50,6 @@ def app_specific_action(webdriver, datasets):
             # Wait for options element visible
             page.wait_until_visible((By.CLASS_NAME, 'cv-request-options'))
             # Wait for you app-specific UI element by ID selector
-            page.wait_until_visible((By.ID, "ID_OF_YOUR_APP_SPECIFIC_UI_ELEMENT"))
+            page.wait_until_visible((By.XPATH, f"//dl[@data-test-id='{custom_field_id}']"))
         sub_measure()
     measure()
