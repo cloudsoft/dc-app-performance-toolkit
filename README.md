@@ -192,3 +192,18 @@ To help us continue improving the Toolkit, we’d love you to keep these analyti
 
 ## Running Taurus
 Navigate to [docs](docs) folder and follow instructions.
+
+### Kubectl Stuff
+```shell
+aws eks update-kubeconfig --name atlas-dc-app-performance-25-cluster --region us-east-2
+```
+```shell
+kubectl get pods --namespace atlassian
+```
+```shell
+kubectl logs --namespace atlassian jira-0 
+```
+```shell
+kubectl exec -it --namespace atlassian jira-0 -- bash
+cat /opt/atlassian/jira/logs/atlassian-jira.log
+```
