@@ -1,3 +1,5 @@
+from selenium.webdriver.common.by import By
+
 from selenium_ui.conftest import print_timing
 from selenium_ui.jsm.pages.customer_pages import CustomerPortals
 
@@ -31,5 +33,9 @@ def create_opsitem_request(webdriver, datasets):
         @print_timing("selenium_customer_aws_create_request:create_and_submit_request")
         def sub_measure():
             customer_portal.create_and_submit_request()
+            for button in customer_portal.get_elements((By.CSS_SELECTOR, ".aui-close-button")):
+                button.click()
+            customer_portal.go_to()
+            customer_portal.wait_for_page_loaded()
         sub_measure()
     measure()

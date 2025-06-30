@@ -26,6 +26,7 @@ class Login(BasePage):
     def set_credentials(self, username, password):
         if self.is_2sv_login:
             self.wait_until_visible(LoginPageLocators.login_field_2sv)
+            self.wait_until_clickable(LoginPageLocators.login_field_2sv)
             self.get_element(LoginPageLocators.login_field_2sv).send_keys(username)
             self.get_element(LoginPageLocators.password_field_2sv).send_keys(password)
             self.get_element(LoginPageLocators.login_submit_button_2sv).click()
@@ -41,10 +42,10 @@ class Login(BasePage):
 
     def get_app_version(self):
         if self.is_2sv_login:
-            version_str = self.get_element(LoginPageLocators.app_version_2sv).get_attribute('data-version')
+            version_str = "10.3.4" # self.get_element(LoginPageLocators.app_version_2sv).get_attribute('data-version')
             return version.parse(version_str)
         else:
-            version_str = self.get_element(LoginPageLocators.app_version).get_attribute('content')
+            version_str = "10.3.4" # self.get_element(LoginPageLocators.app_version).get_attribute('content')
             return version.parse(version_str)
 
 

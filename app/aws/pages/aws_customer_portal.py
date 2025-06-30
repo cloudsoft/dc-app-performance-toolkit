@@ -11,7 +11,7 @@ class AWSCustomerPortal(CustomerPortal):
     def choose_aws_opsitem_request_type(self):
         request_types = self.get_elements(CustomerPortalSelectors.request_type)
         if len(request_types) > 1:
-            request_type = next(filter(lambda rt: rt.text == 'AWS OpsItem', request_types))
+            request_type = next(filter(lambda rt: rt.text == 'AWS Ops Item', request_types))
         else:
             request_type = request_types[0]
         request_type.click()

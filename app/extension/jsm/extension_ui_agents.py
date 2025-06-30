@@ -28,6 +28,7 @@ def app_specific_action(webdriver, datasets):
             login_page = Login(webdriver)
             login_page.delete_all_cookies()
             login_page.go_to()
+            login_page.is_2sv()
             login_page.set_credentials(username=username, password=password)
             if login_page.is_first_login():
                 login_page.first_login_setup()

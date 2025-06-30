@@ -24,7 +24,7 @@ products = ["jira"]
 # If storing license as plain-text is not a concern for this environment, feel free to uncomment the following line and supply the license here.
 # ! IMPORTANT ! Please make sure valid license is used without spaces and new line symbols.
 # ! REQUIRED !
-jira_license = "jira-license"
+jira_license = "AAAB7A0ODAoPeNqNUl1z2jAQfPev8ExfkunYNaYmwIxnSoVpIP4gMYS2w4uwDxDYkivJtP73laEEJhloHnXau73d2w8DTvQAV7rd1K1297PTbTo66k9027IdDXHAkjDaxxLcumJYjmE3NZ8kQAVMqgJCnIOLoiDwntCw52thmS+AR8upAC5co3HEen8KwquzQS3DtrW4XIiEk6ImcSUvQUtYbmKZYSEIpqYaslP9KYiteYXU2+GsxKchG8KxqbgwAiqBH4rZof8ei7UboN9ocP9p8ZBKMh5vwnA2mOTexzWfjWePI6/qrR+DX0Oxfigw321H6WbKtmz6XPk/x6jqzd25e9Q17Lv+sB97oeHbVqfVuXPaVzTQMn9iGSBWUlmbs1+04CwtE2nWD+McjRNJdnAm6SLyjeux+gSulvv63bKNzo+oYQzDdsvwI+ebtoXqWeFquxoty7qz2s1mQxuXPFljAa+PfVnN3tyCE/GuHV/fQ3nmvte3cyf6cIrMSJHo8QGoYkzxCnJFod8sGc+BZ9XLp+ra3uo39RL6YYvbeVc/BUcLMFFVimlyIav/8nN0zv6P3FhiXmtd4kyAFvEVpkQcMooyVqYxW0oNMSqVNk+RZ+6Kw8qkJGHZl6RGCIVIGC9M5csRuU/+VeBfMN9VPjAuAhUAgiBqIsR59ydotu+MQaAYI25skO4CFQCGIowDci00vVmWPpfjWGEYNL/mcQ==X02nf"
 confluence_license = "confluence-license"
 bitbucket_license = "bitbucket-license"
 crowd_license = "crowd-license"
@@ -102,11 +102,11 @@ test_deployment_mem_limit = "8Gi"
 # - "atlassian/jira-servicemanagement"
 #
 # Jira
-jira_image_repository = "atlassian/jira-software"
+# jira_image_repository = "atlassian/jira-software"
 
 # JSM
 # ! REQUIRED for JSM !
-# jira_image_repository = "atlassian/jira-servicemanagement"
+jira_image_repository = "atlassian/jira-servicemanagement"
 
 # Supported versions by DCAPT: https://github.com/atlassian/dc-app-performance-toolkit#supported-versions
 # Jira version
