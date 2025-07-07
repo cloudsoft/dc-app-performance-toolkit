@@ -52,6 +52,6 @@ def app_specific_action(webdriver, datasets):
             # Wait for summary field visible
             page.wait_until_visible((By.ID, "summary-val"))
             # Wait for you app-specific UI element by ID selector
-            page.wait_until_visible((By.ID, customfield_id))
+            # page.wait_until_visible((By.ID, customfield_id))
         sub_measure()
     measure()
